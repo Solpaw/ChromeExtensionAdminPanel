@@ -1,0 +1,44 @@
+@import "../../assets/scss/variables";
+
+:host {
+    border: 2px solid mat-color($color-accent, 500);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+    height: 100%;
+    
+    div {
+        margin: 5% 10%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+
+        mat-form-field {
+            width: 100%;
+        }
+
+        .tableContainer {
+            margin: 0;
+            overflow: auto;
+            table {
+                width: 100%;
+            }
+
+            .mat-table {
+                background: mat-color($color-primary,500);
+            }
+
+            mat-paginator {
+                background: mat-color($color-primary,500);
+            }
+        }
+    }
+}
+
+::ng-deep .mat-select-panel {
+    background: mat-color($color-accent,500)!important;
+    border-radius: 20px!important;
+    color: $color-text;
+}
+

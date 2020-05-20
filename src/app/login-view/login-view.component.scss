@@ -1,0 +1,49 @@
+@import "../../assets/scss/variables";
+
+header {
+    color: $color-text;
+    height: 10vh;
+    min-height: 50px;
+    background-color: mat-color($color-accent, 500);
+    display: flex;
+    align-items: center;
+    font-size: xx-large;   
+    div{
+        margin-left: 50px;
+    }
+}
+
+.mainContainer {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .formContainer {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid mat-color($color-accent, 500);
+        border-radius: 20px;
+        form {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .errorBox {
+            text-align: center;
+            font-weight: bolder;
+            color: $color-danger;
+            border: 1px solid $color-danger;
+            background-color: $color-warning;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .mat-raised-button {
+            color: $color-text;
+        }
+    }
+}

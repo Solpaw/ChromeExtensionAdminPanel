@@ -1,0 +1,28 @@
+<header>
+    <div>
+        {{title}}
+    </div>
+</header>
+<div class="mainContainer">
+    <div class="formContainer">
+        <form [formGroup]="form">
+            <div *ngIf="form.errors?.invalidCred" class="errorBox">Invalid email and/or password'</div>
+            <div *ngIf="form.errors?.serverUna" class="errorBox">Server unreachable. Please try again later.</div>
+            <div *ngIf="form.errors?.insPerm" class="errorBox">Insufficient permissions.</div>
+            <mat-form-field color="accent" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input formControlName="email" matInput placeholder="Ex. pat@example.com">
+              <mat-error *ngIf="form.get('email').errors?.required">Field cannot be empty!</mat-error>
+            </mat-form-field>
+            <mat-form-field color="accent" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input formControlName="password" class="password" matInput type="password">
+              <mat-error *ngIf="form.get('email').errors?.required">Field cannot be empty!</mat-error>
+            </mat-form-field>
+            <mat-slide-toggle (change)="rememberMe()" color="accent">Remember me!</mat-slide-toggle>
+        </form>
+        <button (click)="onLogInClicked()"  mat-raised-button color="accent">Sign in</button>
+    </div>
+</div>
+
+

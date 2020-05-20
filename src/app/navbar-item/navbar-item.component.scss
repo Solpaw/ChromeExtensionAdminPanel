@@ -1,0 +1,22 @@
+@import "../../assets/scss/variables";
+
+:host {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid mat-color($color-primary,500);
+    div {
+        color: $color-text;
+    }
+}
+
+:host(.active) {
+    border-bottom: 5px solid $color-text;
+    border-top: 5px solid $color-text;
+}
+
+:host:hover {
+    border-bottom: 5px solid $color-text;
+}
+
